@@ -139,7 +139,7 @@ export default function GradientGenerator({ baseColor }: GradientGeneratorProps)
             max={360}
             step={1}
             value={[angle]}
-            onValueChange={(value) => setAngle(value[0])}
+            onValueChange={(value: number[]) => setAngle(value[0])}
           />
         </div>
       )}
@@ -171,7 +171,7 @@ export default function GradientGenerator({ baseColor }: GradientGeneratorProps)
                   max={100}
                   step={1}
                   value={[stop.position]}
-                  onValueChange={(value) => updateStop(index, "position", value[0])}
+                  onValueChange={(value: number[]) => updateStop(index, "position", value[0])}
                 />
                 <span className="text-sm w-8">{stop.position}%</span>
               </div>

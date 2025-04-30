@@ -101,7 +101,7 @@ export default function ColorFormatInputs({ color, onChange }: ColorFormatInputs
               max={255}
               step={1}
               value={[rgb.r]}
-              onValueChange={(value) => handleRgbChange("r", value[0])}
+              onValueChange={(value: number[]) => handleRgbChange("r", value[0])}
               className="[&>.sliderTrack]:bg-red-500"
             />
           </div>
@@ -116,7 +116,7 @@ export default function ColorFormatInputs({ color, onChange }: ColorFormatInputs
               max={255}
               step={1}
               value={[rgb.g]}
-              onValueChange={(value) => handleRgbChange("g", value[0])}
+              onValueChange={(value: number[]) => handleRgbChange("g", value[0])}
               className="[&>.sliderTrack]:bg-green-500"
             />
           </div>
@@ -131,7 +131,7 @@ export default function ColorFormatInputs({ color, onChange }: ColorFormatInputs
               max={255}
               step={1}
               value={[rgb.b]}
-              onValueChange={(value) => handleRgbChange("b", value[0])}
+              onValueChange={(value: number[]) => handleRgbChange("b", value[0])}
               className="[&>.sliderTrack]:bg-blue-500"
             />
           </div>
@@ -156,7 +156,7 @@ export default function ColorFormatInputs({ color, onChange }: ColorFormatInputs
               max={360}
               step={1}
               value={[hsl.h]}
-              onValueChange={(value) => handleHslChange("h", value[0])}
+              onValueChange={(value: number[]) => handleHslChange("h", value[0])}
               className="[&>.sliderTrack]:bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500"
             />
           </div>
@@ -171,7 +171,7 @@ export default function ColorFormatInputs({ color, onChange }: ColorFormatInputs
               max={100}
               step={1}
               value={[hsl.s]}
-              onValueChange={(value) => handleHslChange("s", value[0])}
+              onValueChange={(value: number[]) => handleHslChange("s", value[0])}
               className="[&>.sliderTrack]:bg-gradient-to-r from-gray-400 to-red-500"
             />
           </div>
@@ -186,7 +186,7 @@ export default function ColorFormatInputs({ color, onChange }: ColorFormatInputs
               max={100}
               step={1}
               value={[hsl.l]}
-              onValueChange={(value) => handleHslChange("l", value[0])}
+              onValueChange={(value: number[]) => handleHslChange("l", value[0])}
               className="[&>.sliderTrack]:bg-gradient-to-r from-black via-gray-500 to-white"
             />
           </div>

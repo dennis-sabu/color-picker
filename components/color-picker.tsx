@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast"
 import ColorFormatInputs from "./color-format-inputs"
 import PredefinedPalettes from "./predefined-palettes"
 import GradientGenerator from "./gradient-generator"
+import ColorHarmony from "./color-harmony"
 
 export default function ColorPicker() {
   const [color, setColor] = useState("#6366f1")
@@ -130,11 +131,16 @@ export default function ColorPicker() {
         {/* Tabs Column */}
         <div className="col-span-2 border-l dark:border-gray-700">
           <Tabs defaultValue="palettes" className="w-full">
-            <TabsList className="w-full grid grid-cols-3 rounded-none">
+            <TabsList className="w-full grid grid-cols-4 rounded-none">
+              <TabsTrigger value="harmonies">Harmonies</TabsTrigger>
               <TabsTrigger value="palettes">Palettes</TabsTrigger>
               <TabsTrigger value="gradients">Gradients</TabsTrigger>
               <TabsTrigger value="saved">History & Favorites</TabsTrigger>
             </TabsList>
+
+            <TabsContent value="harmonies" className="p-6">
+              <ColorHarmony baseColor={color} onSelectColor={setColor} />
+            </TabsContent>
 
             <TabsContent value="palettes" className="p-6">
               <PredefinedPalettes onSelectColor={setColor} />
